@@ -8,6 +8,9 @@
   body {
     @apply bg-background text-primary font-sans antialiased;
   }
+  button, input, select, textarea, a {
+    touch-action: manipulation;
+  }
 }
 
 /* Custom scrollbar hiding for horizontal scrolls */

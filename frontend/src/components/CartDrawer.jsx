@@ -84,16 +84,16 @@ const CartDrawer = ({ isOpen, onClose, cart, addToCart, removeFromCart, totalPri
                     <div className="flex items-center bg-white border border-gray-200 rounded-lg shadow-sm">
                       <button 
                         onClick={() => removeFromCart(item.id)}
-                        className="p-1.5 text-gray-500 hover:text-accent transition-colors"
+                        className="p-2 text-gray-500 hover:text-accent transition-colors"
                       >
                         <FiMinus className="w-4 h-4" />
                       </button>
-                      <span className="px-2 font-semibold text-sm min-w-[1.5rem] text-center">
+                      <span className="px-3 font-semibold text-sm min-w-[2rem] text-center">
                         {item.quantity}
                       </span>
                       <button 
                         onClick={() => addToCart(item)}
-                        className="p-1.5 text-gray-500 hover:text-accent transition-colors"
+                        className="p-2 text-gray-500 hover:text-accent transition-colors"
                       >
                         <FiPlus className="w-4 h-4" />
                       </button>
@@ -117,7 +117,7 @@ const CartDrawer = ({ isOpen, onClose, cart, addToCart, removeFromCart, totalPri
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
                 placeholder="Enter your name" 
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                className="w-full text-base px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
             <div className="flex justify-between items-center mb-4 border-t border-gray-100 pt-3">

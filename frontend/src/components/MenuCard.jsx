@@ -25,7 +25,7 @@ const MenuCard = ({ item, quantity, onAdd, onRemove }) => {
         {quantity === 0 ? (
           <button 
             onClick={onAdd}
-            className="bg-accent/10 hover:bg-accent hover:text-white text-accent font-semibold px-4 py-1.5 rounded-lg transition-colors text-sm"
+            className="bg-accent/10 hover:bg-accent hover:text-white text-accent font-semibold px-5 py-2 rounded-lg transition-colors text-sm"
           >
             ADD
           </button>
@@ -33,7 +33,7 @@ const MenuCard = ({ item, quantity, onAdd, onRemove }) => {
           <div className="flex items-center bg-accent/10 rounded-lg">
             <button 
               onClick={onRemove}
-              className="p-1.5 text-accent hover:text-white hover:bg-accent rounded-l-lg transition-colors"
+              className="p-2 text-accent hover:text-white hover:bg-accent rounded-l-lg transition-colors"
             >
               <FiMinus className="w-4 h-4" />
             </button>
@@ -42,7 +42,7 @@ const MenuCard = ({ item, quantity, onAdd, onRemove }) => {
             </span>
             <button 
               onClick={onAdd}
-              className="p-1.5 text-accent hover:text-white hover:bg-accent rounded-r-lg transition-colors"
+              className="p-2 text-accent hover:text-white hover:bg-accent rounded-r-lg transition-colors"
             >
               <FiPlus className="w-4 h-4" />
             </button>

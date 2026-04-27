@@ -82,7 +82,7 @@ function App() {
       {/* Sticky Header */}
       <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-primary tracking-tight">Whereabout Cafe</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-primary tracking-tight">Whereabout Cafe</h1>
           <div className="relative group">
             <button 
               onClick={() => setIsCartOpen(true)}
@@ -107,7 +107,7 @@ function App() {
           </div>
           <input
             type="text"
-            className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+            className="w-full text-base pl-10 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
             placeholder="Search for your favorite dish..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -174,10 +174,10 @@ function App() {
 
       {/* Floating Action Button for Cart (Mobile) */}
       {totalItems > 0 && (
-        <div className="fixed bottom-6 left-0 right-0 z-30 px-4 sm:hidden pointer-events-none">
+        <div className="fixed bottom-4 left-4 right-4 z-30 sm:hidden pointer-events-none pb-safe">
           <button 
             onClick={() => setIsCartOpen(true)}
-            className="w-full bg-accent text-white py-4 rounded-xl shadow-xl flex justify-between items-center px-6 font-semibold pointer-events-auto active:scale-95 transition-transform"
+            className="w-full bg-accent text-white py-3.5 rounded-xl shadow-[0_8px_30px_rgba(242,84,15,0.3)] flex justify-between items-center px-5 font-semibold pointer-events-auto active:scale-95 transition-transform"
           >
             <span>{totalItems} item{totalItems > 1 ? 's' : ''} added</span>
             <span className="flex items-center gap-2">
