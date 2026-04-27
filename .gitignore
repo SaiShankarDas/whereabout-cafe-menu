@@ -1,0 +1,12 @@
+# Root level gitignore
+.DS_Store
+
+# Backend ignores
+backend/node_modules/
+backend/.env
+backend/server.log
+
+# Ensure frontend node_modules is ignored even if frontend/.gitignore fails
+frontend/node_modules/
+frontend/dist/
+frontend/.env*
