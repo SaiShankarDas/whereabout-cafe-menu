@@ -16,14 +16,11 @@ function App() {
   useEffect(() => {
     // Fetch menu data from backend
     // For now we assume backend runs on localhost:5000 in dev
-    const fetchMenu = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/menu');
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+        const response = await axios.get(`${apiUrl}/api/menu`);
         setMenu(response.data);
         if (response.data.length > 0) {
-          setActiveCategory(response.data[0].category);
-        }
-      } catch (error) {
         console.error('Error fetching menu:', error);
       } finally {
         setLoading(false);
