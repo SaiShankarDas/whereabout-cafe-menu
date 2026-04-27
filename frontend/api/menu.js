@@ -1,5 +1,5 @@
-const { parse } = require('csv-parse/sync');
-const axios = require('axios');
+import { parse } from 'csv-parse/sync';
+import axios from 'axios';
 
 // Vercel serverless functions maintain memory between warm invocations
 let menuCache = null;
@@ -23,7 +23,7 @@ const parseCSV = (csvData) => {
   }));
 };
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   // CORS configuration for Vercel
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
