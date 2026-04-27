@@ -78,9 +78,9 @@ function App() {
   const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background w-full overflow-x-hidden">
       {/* Sticky Header */}
-      <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
+      <header className="sticky top-0 z-20 w-full bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl sm:text-2xl font-bold text-primary tracking-tight">Whereabout Cafe</h1>
           <div className="relative group">
@@ -99,7 +99,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 mt-6 pb-24">
+      <main className="max-w-4xl w-full mx-auto px-4 mt-6 pb-24 flex-1 min-w-0">
         {/* Search Bar */}
         <div className="relative mb-6">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
