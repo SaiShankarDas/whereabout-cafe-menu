@@ -18,7 +18,8 @@ function App() {
     // For now we assume backend runs on localhost:5000 in dev
     const fetchMenu = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+        // Use local backend in dev, and Vercel serverless function in production
+        const apiUrl = import.meta.env.DEV ? 'http://localhost:5001' : '';
         const response = await axios.get(`${apiUrl}/api/menu`);
         setMenu(response.data);
         if (response.data.length > 0) {
